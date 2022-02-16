@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>grid</title>
+        <style>
+            .wrapper{
+                display: grid; 
+                /*funcao repeat() para repetir estilizações */
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 50px;
+            }
+
+            .wrapper2{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: minmax(100px, auto);
+            }
+
+            .wrapper3{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 100px;
+            }
+            
+            .box1{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                background: blue;
+            }
+
+            .box2{
+                grid-column-start: 1;
+                grid-row-start: 3;
+                grid-row-end: 5;
+                background: red;
+            }
+
+            .box3{
+                grid-column-start: 2;
+                grid-row-start: 3;
+                grid-row-end: 5;
+                background: violet;
+            }
+
+            .box4{
+                background: cornflowerblue;
+            }
+
+            .box5{
+                background: blanchedalmond;
+            }
+
+            .wrapper4{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 10px;
+                grid-row-gap: 1em;
+            }
+
+            .wrapper4 div{
+                background: lawngreen;
+            }
+
+            .box1{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        </style>
+    </head>
+    <body>
+        <!--exemplo 1 start-->
+       <div class="content-box">
+        <div class="wrapper">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+            <div>Five</div>
+            <div>Five</div>
+            <div>Five</div>
+         </div>
+       </div>
+       <!--Exemplos 1 end-->
+
+       <!--Exemplos 2 end-->
+       <div class="wrapper2">
+            <div>One</div>
+            <div>Two
+                <p>I have some more content in.</p>
+        
+                <p>This makes me taller than 100 pixels.</p>
+            </div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+        </div>
+       <!--Exemplos 2 end-->
+
+
+       <!--Exemplo 3 start-->
+       <div class="wrapper3">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+        <div class="box4">Four</div>
+        <div class="box5">Five</div>
+     </div>
+       <!--Exemplo 3 end-->
+
+
+       <!--Exemplo 4 start "Gutters"-->
+        <div class="wrapper4">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+        </div>
+       <!--Exemplo 4 end "Gutters"-->
+
+       <!--Exmplo 5 start "Alinhando grids"-->
+       <div class="wrapper5">
+        <div class="box box1">
+            <div class="nested">a</div>
+            <div class="nested">b</div>
+            <div class="nested">c</div>
+        </div>
+        <div class="box box2">Two</div>
+        <div class="box box3">Three</div>
+        <div class="box box4">Four</div>
+        <div class="box box5">Five</div>
+     </div>
+       <!--Exmplo 5 end "Alinhando grids"-->
+
+
+
+    </body>
+</html>
